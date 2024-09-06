@@ -58,7 +58,7 @@ function get_pkgs() {
           filepath: filepath,
           dir: path.dirname(filepath),
           name: path.basename(filepath),
-          size: filesize(stat.size)
+          size: (stat.size) / 1073741824 * 1024
         });
       }
     });
